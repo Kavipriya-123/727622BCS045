@@ -1,0 +1,20 @@
+### POST request to authenticate
+POST http://localhost:5000/evaluation-service/auth
+Content-Type: application/json
+
+{
+  "email": "your_email@example.com",
+  "name": "Your Name",
+  "rollNo": "your_roll_number",
+  "accessCode": "your_access_code",
+  "clientID": "your_client_id",
+  "clientSecret": "your_client_secret"
+}
+
+### GET request to fetch users (with Bearer Token)
+GET http://localhost:5000/evaluation-service/users
+Authorization: Bearer your_jwt_token_here
+
+### GET request to fetch posts by postId
+GET http://localhost:5000/evaluation-service/posts/150/comments
+Authorization: Bearer your_jwt_token_here
